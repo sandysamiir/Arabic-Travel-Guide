@@ -11,7 +11,7 @@ class GetWeatherData:
         try:
             logging.info("Fetching weather data using WebTools.")
             weather_data = WebTools.get_weather_data
-            logging.info("Weather data fetched successfully.")
+            logging.info(f"Weather data fetched successfully. {weather_data}")
             return weather_data
         except Exception as e:
             logging.info("Failed to fetch weather data.")

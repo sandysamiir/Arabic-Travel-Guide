@@ -13,16 +13,20 @@ from tools.get_weather_data import GetWeatherData
 class TravelAgent:
     @classmethod
     def initialize_travel_agent(cls):
+        """
+        Initializes and returns the Travel Agent.
+        """
         try:
             logging.info("Initializing the Travel Agent.")
 
             travel_agent = Agent(
-                role="Travel Agent",
-                goal="Assist travelers with their queries",
-                attributes="friendly, hardworking, and detailed in reporting back to users",
-                llm=LoadModel.load_openai_model(),
-                tools=[SearchFlights.search_flights_tool(), GetWeatherData.fetch_weather_data()
-                    
+                role="وكيل السفر",  # Arabic for "Travel Agent"
+                goal="مساعدة المسافرين في استفساراتهم",  # Arabic for "Assist travelers with their queries"
+                attributes="ودود، مجتهد، ومفصل في تقديم التقارير للمستخدمين",  # Arabic for "friendly, hardworking, and detailed in reporting back to users"
+                llm=LoadModel.load_groq_model("meta-llama/llama-4-scout-17b-16e-instruct"),
+                tools=[
+                    SearchFlights.search_flights_tool(),
+                    GetWeatherData.fetch_weather_data()
                 ]
             )
 

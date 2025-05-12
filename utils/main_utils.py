@@ -1,18 +1,18 @@
 import sys
 import os
-from taskflowai import OpenaiModels, set_verbosity # type: ignore
+from taskflowai import GroqModels, set_verbosity # type: ignore
 import google.generativeai as genai # type: ignore
 from dotenv import load_dotenv # type: ignore
 from logger.logger_config import logging
 from exception.custom_exception import CustomException
 
-
+print(dir(GroqModels))
 # Load environment variables
 load_dotenv()
 
 # Validate required API keys
 required_keys = [
-    "OPENAI_API_KEY"
+    "GROQ_API_KEY"
 ]
 
 # Check for missing keys
@@ -25,15 +25,15 @@ set_verbosity(True)
 
 class LoadModel:
     @classmethod
-    def load_openai_model(cls):
+    def load_groq_model(cls, model_name):
         """
-        Load and return the OpenAI GPT-3.5-turbo model.
+        Load and return the Groq  model.
         """
         try:
-            logging.info("Loading OpenAI GPT-3.5-turbo model.")
-            model = OpenaiModels.gpt_3_5_turbo
-            logging.info("OpenAI GPT-3.5-turbo model loaded successfully.")
+            logging.info(f"Loading Groq {model_name} model.")
+            model = GroqModels.custom_model(model_name=model_name)
+            logging.info(f"Groq {model_name} model loaded successfully.")
             return model
         except Exception as e:
-            logging.info("Failed to load OpenAI GPT-3.5-turbo model")
+            logging.info(f"Failed to load Groq {model_name} model")
             raise CustomException(sys, e)
