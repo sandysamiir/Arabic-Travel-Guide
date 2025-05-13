@@ -15,6 +15,16 @@ import markdown2
 from weasyprint import HTML
 import tempfile
 
+headers = {
+    "authorization": st.secrets["GROQ_API_KEY",
+                                "SERPER_API_KEY",
+                                "AMADEUS_API_KEY",
+                                "AMADEUS_API_SECRET",
+                                "WEATHER_API_KEY",
+                                "PEXELS_API_KEY"
+                                ]
+}
+
 st.set_page_config(
     page_title="Travel Planner",
     page_icon="✈️",
