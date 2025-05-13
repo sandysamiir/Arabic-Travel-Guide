@@ -1,0 +1,1 @@
+apt install python3-pip libpango-1.0-0
