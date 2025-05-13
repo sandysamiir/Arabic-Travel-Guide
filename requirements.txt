@@ -1,0 +1,7 @@
+streamlit
+taskflowai
+Pillow
+markdown2
+weasyprint
+requests
+python-dotenv

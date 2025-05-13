@@ -1,12 +1,10 @@
 import sys
 import os
 from taskflowai import GroqModels, set_verbosity # type: ignore
-import google.generativeai as genai # type: ignore
 from dotenv import load_dotenv # type: ignore
 from logger.logger_config import logging
 from exception.custom_exception import CustomException
 
-print(dir(GroqModels))
 # Load environment variables
 load_dotenv()
 
