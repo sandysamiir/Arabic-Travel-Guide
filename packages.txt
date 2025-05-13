@@ -1,1 +1,4 @@
-apt install python3-pip libpango-1.0-0
+libcairo2
+libpango-1.0-0
+libgdk-pixbuf2.0-0
+libglib2.0-0
