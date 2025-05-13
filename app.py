@@ -16,13 +16,12 @@ from weasyprint import HTML
 import tempfile
 
 headers = {
-    "authorization": st.secrets["GROQ_API_KEY",
-                                "SERPER_API_KEY",
-                                "AMADEUS_API_KEY",
-                                "AMADEUS_API_SECRET",
-                                "WEATHER_API_KEY",
-                                "PEXELS_API_KEY"
-                                ]
+    "authorization_groq": st.secrets["GROQ_API_KEY"],
+    "authorization_serper": st.secrets["SERPER_API_KEY"],
+    "authorization_amadeus_key": st.secrets["AMADEUS_API_KEY"],
+    "authorization_amadeus_secret": st.secrets["AMADEUS_API_SECRET"],
+    "authorization_weather": st.secrets["WEATHER_API_KEY"],
+    "authorization_pexels": st.secrets["PEXELS_API_KEY"]
 }
 
 st.set_page_config(
