@@ -3,5 +3,8 @@ taskflowai
 Pillow
 markdown2
 weasyprint
+cffi
+pango
+cairo
 requests
 python-dotenv
