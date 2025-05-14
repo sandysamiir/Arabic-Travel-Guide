@@ -4,6 +4,32 @@ Travel Guide is a web-based application built with Streamlit that helps Arabic u
 
 ---
 
+## Architecture Diagram
+
+The system follows a modular agent-based structure as shown in the figure below:
+
+![image](https://github.com/user-attachments/assets/960fc026-98dc-4180-a4f1-df3952c12b8d)
+
+---
+
+## User Interface Preview
+
+![image](https://github.com/user-attachments/assets/c87a7923-6c7e-43cd-b785-0a919befd5f8)
+
+---
+
+## Sample Output
+
+Here’s some examples of the generated travel report:
+
+![image](https://github.com/user-attachments/assets/ac3251ae-3b17-41f8-95cd-2dd27e673e6c)
+![image](https://github.com/user-attachments/assets/16b6ac0a-226f-433f-97c2-0c1e45d36b57)
+![image](https://github.com/user-attachments/assets/f6ca1ee1-689a-4ec2-9b95-d462ad7e833d)
+![image](https://github.com/user-attachments/assets/071fc869-0253-4d9e-a774-a068ac2c6edd)
+![image](https://github.com/user-attachments/assets/f4e00120-0f2a-4725-a66f-80b999c8cc5d)
+
+---
+
 ## Features
 
 - **Destination Information**: Get detailed information about your travel destination.
